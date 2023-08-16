@@ -13,11 +13,364 @@
     <title>Home</title>
     <link rel="shortcut icon" type="image/jpg" href="images/favicon.png"/>
     <link href="assets/style.css" rel="stylesheet" type="text/css" />
+    <style>
+      /*
+  Author: Lucy Qi
+  Date: Dec 5 2021
+  Description: styling of all elements of website
+*/
+
+ul {
+  list-style-type:none;
+  overflow:hidden;
+  padding:1em;
+  text-align:center; 
+  width: fit-content;
+  margin: 0 auto;
+}
+
+nav {
+  background-color: rgb(39, 36, 35);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 2000;
+
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color on hover */
+li a:hover {
+  background-color: #E29578;
+}
+
+#background{
+  position: fixed;
+  justify-content: center;
+  width: 100%;
+  height: 100%; 
+  z-index: -1;
+  top: 0px;
+  left: 0px;
+  filter: brightness(58%);
+}
+
+.header {
+  height: 1000px;
+}
+
+.header h1{
+  color: white;
+  font-size: 4.5em;
+  vertical-align: middle;
+  text-align: center;
+  font-weight: 800;
+  margin: auto 14%;
+  letter-spacing: 0.1em;
+  transform: translateY(215%);
+}
+
+
+body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+  background: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  padding: 0; 
+  box-sizing: border-box; 
+  margin: 0 auto; 
+  padding-top: 85px;
+}
+
+h1,h2, h3 {
+  font-weight: 400;
+  text-align: center; 
+  border: 0; 
+  margin: auto;
+}
+
+h1 { 
+  font-size: 3.5em;
+}
+
+h2{
+  font-size: 2.4em; 
+}
+
+h3 {
+  color: rgb(44, 42, 42);
+  font-size: 1.8em;
+}
+
+p{
+  font-size: 1.05em;
+  line-height: 1.3;
+}
+
+.normal{
+  margin: auto 16%;
+  font-weight: 550;
+  font-size: 1.2em;
+}
+
+/*
+.block img {
+ height: 200px;
+ text-align: right; 
+ margin: 45px 45px 25px 25px;
+ 
+}
+
+.block p{
+  text-align: left; 
+  margin: auto;
+  padding: 20px;
+}
+
+
+.block {
+  display: flex; 
+}
+
+.block > * {
+  flex: 1;
+}
+/*
+
+/* typewriter effect */
+.intro{
+  display: inline; 
+}
+
+.typewriter{
+  display: inline;
+}
+
+.typewriter:after{
+  content: "";
+  width: 1px;
+  height: 5%;
+  border-right: 2px solid black; 
+  animation: blink 0.5s infinite ease; 
+}
+
+/* specifies animation code*/
+@keyframes blink{
+  0%{
+    opacity: 0; 
+  }
+  100%{
+    opacity: 1; 
+  }
+}
+
+.quote {
+  /* position: relative; */
+  text-align: center;
+  font-size: 28px;
+  font-weight: 550;
+  font-family: 'Raleway', sans-serif;
+  height: auto;
+  color: white; 
+  background-color: #E29578;
+  padding: 40px 0px;
+  margin: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 82%;
+}
+
+
+.indexbox {
+  background: rgb(225, 240, 240);
+  margin: 40px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+.indexbox p {
+  margin: 30px 64px 64px 64px;
+  color: rgb(0, 0, 0);
+  font-weight: 350;
+}
+
+.indexbox h3{  
+  margin: 40px 64px 64px 64px;
+  font-weight: 650;
+  font-size: 1.9em;
+  text-align: center; 
+}
+
+.headerblue{
+  margin: 1em 20%;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  font-weight: 500;
+  text-align: center;
+  font-size: 1.7em;
+  color: white; 
+  background-color: #83C5BE;
+}
+
+.headerpink{
+  margin: 1em 20%;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  font-weight: 500;
+  text-align: center;
+  font-size: 1.7em;
+  color: white; 
+  background-color: #E29578;
+}
+
+.headingbenefits {
+  background-image: linear-gradient(rgba(87, 80, 78, 0.575),rgba(212, 206, 204, 0.486)), url("https://images.pexels.com/photos/42408/pexels-photo-42408.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  height: 550px;
+  font-size: 3.5em;
+  text-align: center;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 0;
+  letter-spacing: 0.1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  color: white;
+}
+
+.introtext{
+  font-weight: 550;
+  font-size: 1.2em;
+  text-align: center; 
+  margin: auto 18%;
+
+}
+
+.text {
+  margin: auto 17%;
+  font-weight: 350;
+  padding-bottom: 35px;
+}
+
+#textimage{
+  object-fit: cover;
+  width: 50%;
+  height: 300px;
+  padding: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.headingproblem {
+  background-image: linear-gradient(rgba(87, 80, 78, 0.575),rgba(212, 206, 204, 0.486)), url("https://images.pexels.com/photos/3966781/pexels-photo-3966781.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  height: 550px;
+  font-size: 3.5em;
+  text-align: center;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 0;
+  letter-spacing: 0.1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  color: white;
+}
+
+.headingsolutions {
+  background-image: linear-gradient(rgba(87, 80, 78, 0.575),rgba(212, 206, 204, 0.486)), url("https://images.pexels.com/photos/6146931/pexels-photo-6146931.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  height: 550px;
+  font-size: 3.5em;
+  text-align: center;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 0;
+  letter-spacing: 0.1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  color: white;
+}
+
+
+.headingmore {
+  background-image: linear-gradient(rgba(87, 80, 78, 0.575),rgba(212, 206, 204, 0.486)), url("https://images.pexels.com/photos/4103247/pexels-photo-4103247.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  height: 550px;
+  font-size: 3.5em;
+  text-align: center;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 0;
+  letter-spacing: 0.1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  color: white;
+}
+
+/*back to top button*/
+  #myBtn {
+    position: fixed;
+    bottom: 10px;
+    float: right;
+    right: 18.5%;
+    left: 92.25%;
+    max-width: 100px;
+    width: 100%;
+    text-underline-position: none;
+    font-size: 18px;
+    background-color: rgb(39, 36, 35);
+    padding: 1.5px;
+    border: none;
+    border-radius: 8px;
+  }
+
+/*button text*/
+  a{
+    color:white;
+    font-family: 'Raleway';
+  }
+
+/*button hover changes*/
+  #myBtn:hover {
+      background-color: #E29578;
+      text-decoration: none;
+  }
+
+iframe{
+  display: block;
+  margin: 1em auto; 
+}
+    </style>
   </head>
   <body>
-  <style>
-    
-  </style>
   
   <!-- import font -->
   <link href="https://fonts.googleapis.com/css?family=Raleway:200,100,400" rel="stylesheet" type="text/css" />
